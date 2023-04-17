@@ -1,6 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class PhoneBook {
     Map<String, String> nuberList = new HashMap<>();
@@ -26,6 +24,10 @@ public class PhoneBook {
                 .map(Map.Entry::getKey)
                 .findFirst()
                 .orElse(null);
+    }
+
+    public String printAllNames() {
+        return nuberList.values().toString();
     }
 }
 
